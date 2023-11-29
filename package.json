@@ -4,7 +4,8 @@
     "description": "Password Generator Web Application",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "build": "tailwindcss -i ./css/input.css -o ./css/styles.css",
+        "watch": "tailwindcss -i ./css/input.css -o ./css/styles.css --watch"
     },
     "keywords": [],
     "author": "Zekel",
