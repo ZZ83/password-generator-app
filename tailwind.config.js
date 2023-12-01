@@ -2,7 +2,11 @@
 module.exports = {
     content: ["./*.{html,js}"],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                jetBrainsMono: ["JetBrains Mono"],
+            },
+        },
         colors: {
             red: "#F64A4A",
             white: "#E6E5EA",
