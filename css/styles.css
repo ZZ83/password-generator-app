@@ -551,6 +551,14 @@ video {
   margin-right: auto;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .max-w-\[35\.75rem\] {
   max-width: 35.75rem;
 }
@@ -565,6 +573,10 @@ video {
   padding-right: 1rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .font-jetBrainsMono {
   font-family: JetBrains Mono;
 }
@@ -574,7 +586,27 @@ video {
   line-height: 1.313rem;
 }
 
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(129 125 146 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(230 229 234 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .sm\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
+  .sm\:mt-32 {
+    margin-top: 8rem;
+  }
+
+  .sm\:text-600 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
