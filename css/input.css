@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-display: swap;
+        font-family: "JetBrains Mono";
+        font-style: normal;
+        font-weight: 700;
+        src: url("../assets/fonts/jetbrains-mono-v18-latin-700.woff2") format("woff2");
+    }
+}
