@@ -636,6 +636,11 @@ video {
   line-height: 1.5rem;
 }
 
+.text-600 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(129 125 146 / var(--tw-text-opacity));
@@ -644,6 +649,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(230 229 234 / var(--tw-text-opacity));
+}
+
+.text-green {
+  --tw-text-opacity: 1;
+  color: rgb(164 255 175 / var(--tw-text-opacity));
 }
 
 @media (min-width: 340px) {
@@ -709,5 +719,10 @@ video {
   .md\:text-700 {
     font-size: 2rem;
     line-height: 2.625rem;
+  }
+
+  .md\:text-500 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
   }
 }
