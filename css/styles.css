@@ -745,6 +745,11 @@ video {
   font-family: JetBrains Mono;
 }
 
+.text-300 {
+  font-size: 0.875rem;
+  line-height: 1.25;
+}
+
 .text-400 {
   font-size: 1rem;
   line-height: 1.313rem;
@@ -758,11 +763,6 @@ video {
 .text-600 {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.text-300 {
-  font-size: 0.875rem;
-  line-height: 1.25;
 }
 
 .uppercase {
@@ -823,13 +823,13 @@ video {
 }
 
 @media (min-width: 345px) {
-  .xs\:text-\[20px\] {
-    font-size: 20px;
-  }
-
   .xs\:text-400 {
     font-size: 1rem;
     line-height: 1.313rem;
+  }
+
+  .xs\:text-\[20px\] {
+    font-size: 20px;
   }
 }
 
@@ -837,11 +837,6 @@ video {
   .sm\:text-600 {
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-
-  .sm\:text-400 {
-    font-size: 1rem;
-    line-height: 1.313rem;
   }
 }
 
