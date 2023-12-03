@@ -22,13 +22,14 @@ module.exports = {
             },
         },
         fontSize: {
+            300: ["0.875rem", "1.25"],
             400: ["1rem", "1.313rem"],
             500: ["1.125rem", "1.5rem"],
             600: ["1.5rem", "2rem"],
             700: ["2rem", "2.625rem"],
         },
         screens: {
-            xs: "340px",
+            xs: "345px",
             sm: "390px",
             md: "640px",
         },

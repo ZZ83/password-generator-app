@@ -24,7 +24,6 @@
 					<h2 class="md:text-500">Character Length</h2>
 					<span id="charaterLength" class="text-green text-600 md:text-700">10</span>
 				</div>
-
 				<div class="relative flex items-center h-[1.75rem] mt-2 mb-8 md:mt-4">
 					<div class="relative flex w-full">
 						<span  class="absolute left-0 z-10 w-full h-2 bg-gray-700"></span>
@@ -63,15 +62,58 @@
 					</div>
 				</div>
 				
-				Include Uppercase Letters
-				Include Lowercase Letters
-				Include Numbers
-				Include Symbols
-	
+				<div>
+					<div class="flex gap-5 mb-5 md:gap-6">
+						<div class="relative inline-flex items-center">
+							<input id="uppercase" class="relative w-5 h-5 border-2 border-white appearance-none cursor-pointer peer checked:border-green checked:bg-green checked:before:bg-red-500 hover:border-green" type="checkbox"/>
+							<svg class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"  width="14" height="12" xmlns="http://www.w3.org/2000/svg">
+								<path stroke="#18171F" stroke-width="3" fill="none" d="M1 5.607 4.393 9l8-8"/>
+							</svg>
+						</div>
+						<label class="cursor-pointer text-300 xs:text-400 md:text-500" for="uppercase">Include Uppercase Letters</label>
+					</div>
+					<div class="flex gap-5 mb-5 md:gap-6">
+						<div class="relative inline-flex items-center">
+							<input id="lowercase" class="relative w-5 h-5 border-2 border-white appearance-none cursor-pointer peer checked:border-green checked:bg-green checked:before:bg-red-500 hover:border-green" type="checkbox"/>
+							<svg class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"  width="14" height="12" xmlns="http://www.w3.org/2000/svg">
+								<path stroke="#18171F" stroke-width="3" fill="none" d="M1 5.607 4.393 9l8-8"/>
+							</svg>
+						</div>
+						<label class="cursor-pointer text-300 xs:text-400 md:text-500" for="lowercase">Include Lowercase Letters</label>
+					</div>
+					<div class="flex gap-5 mb-5 md:gap-6">
+						<div class="relative inline-flex items-center">
+							<input id="numbers" class="relative w-5 h-5 border-2 border-white appearance-none cursor-pointer peer checked:border-green checked:bg-green checked:before:bg-red-500 hover:border-green" type="checkbox"/>
+							<svg class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"  width="14" height="12" xmlns="http://www.w3.org/2000/svg">
+								<path stroke="#18171F" stroke-width="3" fill="none" d="M1 5.607 4.393 9l8-8"/>
+							</svg>
+						</div>
+						<label class="cursor-pointer text-300 xs:text-400 md:text-500" for="numbers">Include Numbers</label>
+					</div>
+					<div class="flex gap-5 mb-8 md:gap-6">
+						<div class="relative inline-flex items-center">
+							<input id="symbols" class="relative w-5 h-5 border-2 border-white appearance-none cursor-pointer peer checked:border-green checked:bg-green checked:before:bg-red-500 hover:border-green" type="checkbox"/>
+							<svg class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"  width="14" height="12" xmlns="http://www.w3.org/2000/svg">
+								<path stroke="#18171F" stroke-width="3" fill="none" d="M1 5.607 4.393 9l8-8"/>
+							</svg>
+						</div>
+						<label class="cursor-pointer text-300 xs:text-400 md:text-500" for="symbols">Include Symbols</label>
+					</div>
+				</div>
 				Strength
 	
 				Generate
 			</section>
 		</main>
+		<script>
+			const sliderFill     = document.getElementById('fill');
+			const charaterLength = document.getElementById('charaterLength');
+	
+			function slider(range) {
+				const width = `${ (parseInt(range.value) - 1) * 5}%`;
+				sliderFill.style.width = width;
+				charaterLength.innerText = range.value;
+			}
+		</script>
 	</body>
 </html>
