@@ -27,9 +27,10 @@
 
 				<div class="relative flex items-center h-[1.75rem] mt-2 mb-8 md:mt-4">
 					<div class="relative flex w-full">
-						<span id="fill" class="absolute left-0 w-1/2 h-2 bg-green"></span>
+						<span  class="absolute left-0 z-10 w-full h-2 bg-gray-700"></span>
+						<span id="fill" class="absolute left-0 z-20 w-1/2 h-2 bg-green"></span>
 						<input class="
-							w-full h-2 m-0 bg-gray-700 outline-none appearance-none 
+							relative z-30 w-full h-2 m-0 bg-transparent outline-none appearance-none 
 							[&::-webkit-slider-thumb]:appearance-none 
 							[&::-webkit-slider-thumb]:relative 
 							[&::-webkit-slider-thumb]:bg-white 
@@ -54,6 +55,10 @@
 							hover:[&::-moz-range-thumb]:border-solid
 							hover:[&::-moz-range-thumb]:border-2
 							hover:[&::-moz-range-thumb]:border-green
+							active:[&::-moz-range-thumb]:bg-gray-700
+							active:[&::-moz-range-thumb]:border-solid
+							active:[&::-moz-range-thumb]:border-2
+							active:[&::-moz-range-thumb]:border-green
 						"   type="range" min="1" max="20" value="10" oninput="slider(this)" autocomplete="off">
 					</div>
 				</div>

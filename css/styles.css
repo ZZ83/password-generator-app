@@ -562,6 +562,18 @@ video {
   top: 0px;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
 .m-0 {
   margin: 0px;
 }
@@ -701,6 +713,10 @@ video {
 .bg-gray-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(24 23 31 / var(--tw-bg-opacity));
+}
+
+.bg-transparent {
+  background-color: transparent;
 }
 
 .px-4 {
@@ -851,6 +867,14 @@ video {
   z-index: 10;
 }
 
+.\[\&\:\:-moz-range-thumb\]\:z-20::-moz-range-thumb {
+  z-index: 20;
+}
+
+.\[\&\:\:-moz-range-thumb\]\:z-30::-moz-range-thumb {
+  z-index: 30;
+}
+
 .\[\&\:\:-moz-range-thumb\]\:h-\[28px\]::-moz-range-thumb {
   height: 28px;
 }
@@ -925,6 +949,42 @@ video {
   background-color: rgb(24 23 31 / var(--tw-bg-opacity));
 }
 
+.focus\:\[\&\:\:-moz-range-thumb\]\:border-2::-moz-range-thumb:focus {
+  border-width: 2px;
+}
+
+.focus\:\[\&\:\:-moz-range-thumb\]\:border-solid::-moz-range-thumb:focus {
+  border-style: solid;
+}
+
+.focus\:\[\&\:\:-moz-range-thumb\]\:border-green::-moz-range-thumb:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(164 255 175 / var(--tw-border-opacity));
+}
+
+.focus\:\[\&\:\:-moz-range-thumb\]\:bg-gray-700::-moz-range-thumb:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 23 31 / var(--tw-bg-opacity));
+}
+
+.active\:\[\&\:\:-moz-range-thumb\]\:border-2::-moz-range-thumb:active {
+  border-width: 2px;
+}
+
+.active\:\[\&\:\:-moz-range-thumb\]\:border-solid::-moz-range-thumb:active {
+  border-style: solid;
+}
+
+.active\:\[\&\:\:-moz-range-thumb\]\:border-green::-moz-range-thumb:active {
+  --tw-border-opacity: 1;
+  border-color: rgb(164 255 175 / var(--tw-border-opacity));
+}
+
+.active\:\[\&\:\:-moz-range-thumb\]\:bg-gray-700::-moz-range-thumb:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 23 31 / var(--tw-bg-opacity));
+}
+
 .\[\&\:\:-ms-thumb\]\:relative::-ms-thumb {
   position: relative;
 }
@@ -956,6 +1016,18 @@ video {
 
 .\[\&\:\:-webkit-slider-thumb\]\:relative::-webkit-slider-thumb {
   position: relative;
+}
+
+.\[\&\:\:-webkit-slider-thumb\]\:z-20::-webkit-slider-thumb {
+  z-index: 20;
+}
+
+.\[\&\:\:-webkit-slider-thumb\]\:z-10::-webkit-slider-thumb {
+  z-index: 10;
+}
+
+.\[\&\:\:-webkit-slider-thumb\]\:z-30::-webkit-slider-thumb {
+  z-index: 30;
 }
 
 .\[\&\:\:-webkit-slider-thumb\]\:h-\[28px\]::-webkit-slider-thumb {
