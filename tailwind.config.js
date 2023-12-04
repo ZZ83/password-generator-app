@@ -6,6 +6,9 @@ module.exports = {
             fontFamily: {
                 jetBrainsMono: ["JetBrains Mono"],
             },
+            content: {
+                rightArrow: 'url("../assets/images/icon-arrow-right.svg")',
+            },
         },
         colors: {
             red: "#F64A4A",
