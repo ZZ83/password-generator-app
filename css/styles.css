@@ -764,6 +764,10 @@ video {
   fill: #24232C;
 }
 
+.fill-green {
+  fill: #A4FFAF;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -888,6 +892,10 @@ video {
 
 .hover\:fill-green:hover {
   fill: #A4FFAF;
+}
+
+.hover\:fill-white:hover {
+  fill: #E6E5EA;
 }
 
 .hover\:text-green:hover {
