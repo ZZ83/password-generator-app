@@ -1,130 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-		<link rel="stylesheet" href="css/styles.css">
-		<title>Frontend Mentor | Password generator app</title>
-	</head>
-	<body class="max-w-[35.75rem] px-4 mx-auto text-white bg-gray-800 text-400 font-jetBrainsMono">
-		<header>
-			<h1 class="mt-16 text-center text-gray-500 md:mt-32 md:text-600">Password Generator</h1>
-		</header>
-		<main>
-			<section class="flex items-center justify-between h-16 px-4 mt-4 mb-4 bg-gray-600 md:h-20 md:px-8 md:mt-8 md:mb-6">
-				<span class="text-500 xs:text-[20px] sm:text-600 md:text-700">PTx1f5DaFXPTx1f5DaFX</span>
-				<svg class="w-[1.094] h-5 md:w-[1.313] md:h-6" viewBox="0 0 21 24" xmlns="http://www.w3.org/2000/svg">
-					<path d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z" fill="#A4FFAF"/>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>Frontend Mentor | Password generator app</title>
+</head>
+<body class="mx-auto max-w-[35.75rem] bg-gray-800 px-4 font-jetBrainsMono text-400 text-white">
+	<header>
+		<h1 class="mt-16 text-center text-gray-500 md:mt-32 md:text-600">Password Generator</h1>
+	</header>
+	<main>
+		<section class="mb-4 mt-4 flex h-16 items-center justify-between bg-gray-600 px-4 md:mb-6 md:mt-8 md:h-20 md:px-8">
+			<span class="text-500 xs:text-[20px] sm:text-600 md:text-700">PTx1f5DaFXPTx1f5DaFX</span>
+			<svg class="h-5 w-[1.094] md:h-6 md:w-[1.313]" viewBox="0 0 21 24" xmlns="http://www.w3.org/2000/svg">
+				<path d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z" fill="#A4FFAF" />
+			</svg>
+		</section>
+
+		<section class="bg-gray-600 px-4 pb-4 pt-4 md:px-8 md:pb-8 md:pt-6">
+			<div class="flex items-center justify-between">
+				<h2 class="md:text-500">Character Length</h2>
+				<span id="charaterLength" class="text-600 text-green md:text-700">10</span>
+			</div>
+			<div class="relative mb-8 mt-2 flex h-[1.75rem] items-center md:mt-4">
+				<div class="relative flex w-full">
+					<span class="absolute left-0 z-10 h-2 w-full bg-gray-700"></span>
+					<span id="fill" class="absolute left-0 z-20 h-2 w-1/2 bg-green"></span>
+					<input class="relative z-30 m-0 h-2 w-full appearance-none bg-transparent outline-none [&::-moz-range-thumb]:relative [&::-moz-range-thumb]:h-[1.75rem] [&::-moz-range-thumb]:w-[1.75rem] [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:bg-white hover:[&::-moz-range-thumb]:border-2 hover:[&::-moz-range-thumb]:border-solid hover:[&::-moz-range-thumb]:border-green hover:[&::-moz-range-thumb]:bg-gray-700 active:[&::-moz-range-thumb]:border-2 active:[&::-moz-range-thumb]:border-solid active:[&::-moz-range-thumb]:border-green active:[&::-moz-range-thumb]:bg-gray-700 [&::-webkit-slider-thumb]:relative [&::-webkit-slider-thumb]:h-[1.75rem] [&::-webkit-slider-thumb]:w-[1.75rem] [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white hover:[&::-webkit-slider-thumb]:border-2 hover:[&::-webkit-slider-thumb]:border-solid hover:[&::-webkit-slider-thumb]:border-green hover:[&::-webkit-slider-thumb]:bg-gray-700" type="range" min="1" max="20" value="10" oninput="slider(this)" autocomplete="off">
+				</div>
+			</div>
+
+			<div>
+				<div class="mb-5 flex gap-5 md:gap-6">
+					<div class="relative inline-flex items-center">
+						<input id="uppercase" class="checked:before:bg-red-500 peer relative h-5 w-5 cursor-pointer appearance-none border-2 border-white checked:border-green checked:bg-green hover:border-green" type="checkbox" />
+						<svg class="pointer-events-none absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100" width="14" height="12" xmlns="http://www.w3.org/2000/svg">
+							<path stroke="#18171F" stroke-width="3" fill="none" d="M1 5.607 4.393 9l8-8" />
+						</svg>
+					</div>
+					<label class="cursor-pointer text-300 xs:text-400 md:text-500" for="uppercase">Include Uppercase Letters</label>
+				</div>
+				<div class="mb-5 flex gap-5 md:gap-6">
+					<div class="relative inline-flex items-center">
+						<input id="lowercase" class="checked:before:bg-red-500 peer relative h-5 w-5 cursor-pointer appearance-none border-2 border-white checked:border-green checked:bg-green hover:border-green" type="checkbox" />
+						<svg class="pointer-events-none absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100" width="14" height="12" xmlns="http://www.w3.org/2000/svg">
+							<path stroke="#18171F" stroke-width="3" fill="none" d="M1 5.607 4.393 9l8-8" />
+						</svg>
+					</div>
+					<label class="cursor-pointer text-300 xs:text-400 md:text-500" for="lowercase">Include Lowercase Letters</label>
+				</div>
+				<div class="mb-5 flex gap-5 md:gap-6">
+					<div class="relative inline-flex items-center">
+						<input id="numbers" class="checked:before:bg-red-500 peer relative h-5 w-5 cursor-pointer appearance-none border-2 border-white checked:border-green checked:bg-green hover:border-green" type="checkbox" />
+						<svg class="pointer-events-none absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100" width="14" height="12" xmlns="http://www.w3.org/2000/svg">
+							<path stroke="#18171F" stroke-width="3" fill="none" d="M1 5.607 4.393 9l8-8" />
+						</svg>
+					</div>
+					<label class="cursor-pointer text-300 xs:text-400 md:text-500" for="numbers">Include Numbers</label>
+				</div>
+				<div class="mb-8 flex gap-5 md:gap-6">
+					<div class="relative inline-flex items-center">
+						<input id="symbols" class="checked:before:bg-red-500 peer relative h-5 w-5 cursor-pointer appearance-none border-2 border-white checked:border-green checked:bg-green hover:border-green" type="checkbox" />
+						<svg class="pointer-events-none absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100" width="14" height="12" xmlns="http://www.w3.org/2000/svg">
+							<path stroke="#18171F" stroke-width="3" fill="none" d="M1 5.607 4.393 9l8-8" />
+						</svg>
+					</div>
+					<label class="cursor-pointer text-300 xs:text-400 md:text-500" for="symbols">Include Symbols</label>
+				</div>
+			</div>
+
+			<section class="mb-4 flex items-center justify-between bg-gray-700 px-4 py-3.5 md:mb-8 md:px-8 md:py-5">
+				<h2 class="md:text-500">STRENGTH</h2>
+				<div class="flex items-center gap-4">
+					<span class="text-500 md:text-600">MEDIUM</span>
+					<div class="flex gap-2">
+						<div class="h-7 w-2.5 border-2 border-solid border-white"></div>
+						<div class="h-7 w-2.5 border-2 border-solid border-white"></div>
+						<div class="h-7 w-2.5 border-2 border-solid border-white"></div>
+						<div class="h-7 w-2.5 border-2 border-solid border-white"></div>
+					</div>
+				</div>
+			</section>
+
+			<button class="flex h-14 w-full items-center justify-center bg-green fill-gray-600 text-gray-600 hover:border-2 hover:border-solid hover:border-green hover:bg-gray-600 hover:fill-green hover:text-green md:h-16 md:text-500">
+				GENERATE
+				<svg class="ml-4 md:ml-6" width="12" height="12" xmlns="http://www.w3.org/2000/svg">
+					<path d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z" />
 				</svg>
-			</section>
+			</button>
 
-			<section class="px-4 pt-4 pb-4 bg-gray-600 md:px-8 md:pt-6 md:pb-8">
-				<div class="flex items-center justify-between">
-					<h2 class="md:text-500">Character Length</h2>
-					<span id="charaterLength" class="text-green text-600 md:text-700">10</span>
-				</div>
-				<div class="relative flex items-center h-[1.75rem] mt-2 mb-8 md:mt-4">
-					<div class="relative flex w-full">
-						<span  class="absolute left-0 z-10 w-full h-2 bg-gray-700"></span>
-						<span id="fill" class="absolute left-0 z-20 w-1/2 h-2 bg-green"></span>
-						<input class="
-							relative z-30 w-full h-2 m-0 bg-transparent outline-none appearance-none 
-							[&::-webkit-slider-thumb]:appearance-none 
-							[&::-webkit-slider-thumb]:relative 
-							[&::-webkit-slider-thumb]:bg-white 
-							[&::-webkit-slider-thumb]:h-[1.75rem] 
-							[&::-webkit-slider-thumb]:w-[1.75rem]
-							[&::-webkit-slider-thumb]:rounded-full
-							[&::-webkit-slider-thumb]:cursor-pointer
-							hover:[&::-webkit-slider-thumb]:bg-gray-700
-							hover:[&::-webkit-slider-thumb]:border-solid
-							hover:[&::-webkit-slider-thumb]:border-2
-							hover:[&::-webkit-slider-thumb]:border-green
+		</section>
+	</main>
+	<script>
+		const sliderFill = document.getElementById('fill');
+		const charaterLength = document.getElementById('charaterLength');
 
-							[&::-moz-range-thumb]:appearance-none
-							[&::-moz-range-thumb]:border-none 
-							[&::-moz-range-thumb]:relative 
-							[&::-moz-range-thumb]:bg-white 
-							[&::-moz-range-thumb]:h-[1.75rem] 
-							[&::-moz-range-thumb]:w-[1.75rem]
-							[&::-moz-range-thumb]:rounded-full
-							[&::-moz-range-thumb]:cursor-pointer
-							hover:[&::-moz-range-thumb]:bg-gray-700
-							hover:[&::-moz-range-thumb]:border-solid
-							hover:[&::-moz-range-thumb]:border-2
-							hover:[&::-moz-range-thumb]:border-green
-							active:[&::-moz-range-thumb]:bg-gray-700
-							active:[&::-moz-range-thumb]:border-solid
-							active:[&::-moz-range-thumb]:border-2
-							active:[&::-moz-range-thumb]:border-green
-						"   type="range" min="1" max="20" value="10" oninput="slider(this)" autocomplete="off">
-					</div>
-				</div>
-				
-				<div>
-					<div class="flex gap-5 mb-5 md:gap-6">
-						<div class="relative inline-flex items-center">
-							<input id="uppercase" class="relative w-5 h-5 border-2 border-white appearance-none cursor-pointer peer checked:border-green checked:bg-green checked:before:bg-red-500 hover:border-green" type="checkbox"/>
-							<svg class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"  width="14" height="12" xmlns="http://www.w3.org/2000/svg">
-								<path stroke="#18171F" stroke-width="3" fill="none" d="M1 5.607 4.393 9l8-8"/>
-							</svg>
-						</div>
-						<label class="cursor-pointer text-300 xs:text-400 md:text-500" for="uppercase">Include Uppercase Letters</label>
-					</div>
-					<div class="flex gap-5 mb-5 md:gap-6">
-						<div class="relative inline-flex items-center">
-							<input id="lowercase" class="relative w-5 h-5 border-2 border-white appearance-none cursor-pointer peer checked:border-green checked:bg-green checked:before:bg-red-500 hover:border-green" type="checkbox"/>
-							<svg class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"  width="14" height="12" xmlns="http://www.w3.org/2000/svg">
-								<path stroke="#18171F" stroke-width="3" fill="none" d="M1 5.607 4.393 9l8-8"/>
-							</svg>
-						</div>
-						<label class="cursor-pointer text-300 xs:text-400 md:text-500" for="lowercase">Include Lowercase Letters</label>
-					</div>
-					<div class="flex gap-5 mb-5 md:gap-6">
-						<div class="relative inline-flex items-center">
-							<input id="numbers" class="relative w-5 h-5 border-2 border-white appearance-none cursor-pointer peer checked:border-green checked:bg-green checked:before:bg-red-500 hover:border-green" type="checkbox"/>
-							<svg class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"  width="14" height="12" xmlns="http://www.w3.org/2000/svg">
-								<path stroke="#18171F" stroke-width="3" fill="none" d="M1 5.607 4.393 9l8-8"/>
-							</svg>
-						</div>
-						<label class="cursor-pointer text-300 xs:text-400 md:text-500" for="numbers">Include Numbers</label>
-					</div>
-					<div class="flex gap-5 mb-8 md:gap-6">
-						<div class="relative inline-flex items-center">
-							<input id="symbols" class="relative w-5 h-5 border-2 border-white appearance-none cursor-pointer peer checked:border-green checked:bg-green checked:before:bg-red-500 hover:border-green" type="checkbox"/>
-							<svg class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"  width="14" height="12" xmlns="http://www.w3.org/2000/svg">
-								<path stroke="#18171F" stroke-width="3" fill="none" d="M1 5.607 4.393 9l8-8"/>
-							</svg>
-						</div>
-						<label class="cursor-pointer text-300 xs:text-400 md:text-500" for="symbols">Include Symbols</label>
-					</div>
-				</div>
-
-				<section class="flex items-center justify-between bg-gray-700 px-4 py-3.5 md:px-8 md:py-5">
-					<h2 class="md:text-500">STRENGTH</h2>
-					<div class="flex items-center gap-4">
-						<span class="text-500 md:text-600">MEDIUM</span>
-						<div class="flex gap-2">
-							<div class="w-2.5 border-2 border-white border-solid h-7"></div>
-							<div class="w-2.5 border-2 border-white border-solid h-7"></div>
-							<div class="w-2.5 border-2 border-white border-solid h-7"></div>
-							<div class="w-2.5 border-2 border-white border-solid h-7"></div>
-						</div>
-					</div>
-				</section>
-				<button class="w-full mt-4 text-gray-600 bg-green h-14 after:content-rightArrow after:inline-block after:w-3 after:pl-4 md:mt-8 md:h-16 md:after:pl-6">GENERATE</button>
-			</section>
-		</main>
-		<script>
-			const sliderFill     = document.getElementById('fill');
-			const charaterLength = document.getElementById('charaterLength');
-	
-			function slider(range) {
-				const width = `${ (parseInt(range.value) - 1) * 5}%`;
-				sliderFill.style.width = width;
-				charaterLength.innerText = range.value;
-			}
-		</script>
-	</body>
+		function slider(range) {
+			const width = `${(parseInt(range.value) - 1) * 5}%`;
+			sliderFill.style.width = width;
+			charaterLength.innerText = range.value;
+		}
+	</script>
+</body>
 </html>

@@ -603,6 +603,10 @@ video {
   margin-bottom: 2rem;
 }
 
+.ml-4 {
+  margin-left: 1rem;
+}
+
 .mt-16 {
   margin-top: 4rem;
 }
@@ -699,6 +703,10 @@ video {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
 }
@@ -750,6 +758,10 @@ video {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.fill-gray-600 {
+  fill: #24232C;
 }
 
 .px-4 {
@@ -846,26 +858,6 @@ video {
   transition-duration: 150ms;
 }
 
-.after\:inline-block::after {
-  content: var(--tw-content);
-  display: inline-block;
-}
-
-.after\:w-3::after {
-  content: var(--tw-content);
-  width: 0.75rem;
-}
-
-.after\:pl-4::after {
-  content: var(--tw-content);
-  padding-left: 1rem;
-}
-
-.after\:content-rightArrow::after {
-  --tw-content: url("../assets/images/icon-arrow-right.svg");
-  content: var(--tw-content);
-}
-
 .checked\:border-green:checked {
   --tw-border-opacity: 1;
   border-color: rgb(164 255 175 / var(--tw-border-opacity));
@@ -876,9 +868,31 @@ video {
   background-color: rgb(164 255 175 / var(--tw-bg-opacity));
 }
 
+.hover\:border-2:hover {
+  border-width: 2px;
+}
+
+.hover\:border-solid:hover {
+  border-style: solid;
+}
+
 .hover\:border-green:hover {
   --tw-border-opacity: 1;
   border-color: rgb(164 255 175 / var(--tw-border-opacity));
+}
+
+.hover\:bg-gray-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(36 35 44 / var(--tw-bg-opacity));
+}
+
+.hover\:fill-green:hover {
+  fill: #A4FFAF;
+}
+
+.hover\:text-green:hover {
+  --tw-text-opacity: 1;
+  color: rgb(164 255 175 / var(--tw-text-opacity));
 }
 
 .peer:checked ~ .peer-checked\:opacity-100 {
@@ -906,6 +920,14 @@ video {
 @media (min-width: 640px) {
   .md\:mb-6 {
     margin-bottom: 1.5rem;
+  }
+
+  .md\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
+  .md\:ml-6 {
+    margin-left: 1.5rem;
   }
 
   .md\:mt-32 {
@@ -971,11 +993,6 @@ video {
   .md\:text-700 {
     font-size: 2rem;
     line-height: 2.625rem;
-  }
-
-  .md\:after\:pl-6::after {
-    content: var(--tw-content);
-    padding-left: 1.5rem;
   }
 }
 
