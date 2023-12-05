@@ -619,14 +619,6 @@ video {
   margin-top: 1rem;
 }
 
-.mt-96 {
-  margin-top: 24rem;
-}
-
-.inline {
-  display: inline;
-}
-
 .flex {
   display: flex;
 }
@@ -768,10 +760,6 @@ video {
   background-color: transparent;
 }
 
-.bg-none {
-  background-image: none;
-}
-
 .fill-gray-600 {
   fill: #24232C;
 }
@@ -863,10 +851,6 @@ video {
   opacity: 0;
 }
 
-.opacity-25 {
-  opacity: 0.25;
-}
-
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -878,42 +862,9 @@ video {
   transition-duration: 150ms;
 }
 
-.placeholder\:text-white::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(230 229 234 / var(--tw-text-opacity));
-}
-
-.placeholder\:text-white::placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(230 229 234 / var(--tw-text-opacity));
-}
-
-.placeholder\:opacity-25::-moz-placeholder {
-  opacity: 0.25;
-}
-
-.placeholder\:opacity-25::placeholder {
-  opacity: 0.25;
-}
-
-.before\:block::before {
-  content: var(--tw-content);
-  display: block;
-}
-
 .before\:opacity-25::before {
   content: var(--tw-content);
   opacity: 0.25;
-}
-
-.before\:content-\[\'Password\'\]::before {
-  --tw-content: 'Password';
-  content: var(--tw-content);
-}
-
-.before\:content-\[\'P4\$5W0rD\!\'\]::before {
-  --tw-content: 'P4$5W0rD!';
-  content: var(--tw-content);
 }
 
 .checked\:border-green:checked {
@@ -924,21 +875,6 @@ video {
 .checked\:bg-green:checked {
   --tw-bg-opacity: 1;
   background-color: rgb(164 255 175 / var(--tw-bg-opacity));
-}
-
-.checked\:before\:block:checked::before {
-  content: var(--tw-content);
-  display: block;
-}
-
-.empty\:before\:inline-block:empty::before {
-  content: var(--tw-content);
-  display: inline-block;
-}
-
-.empty\:before\:opacity-25:empty::before {
-  content: var(--tw-content);
-  opacity: 0.25;
 }
 
 .empty\:before\:content-\[\'P4\$5W0rD\!\'\]:empty::before {
