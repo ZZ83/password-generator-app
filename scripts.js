@@ -1,7 +1,8 @@
+const password = document.getElementById("password");
+const copyIcon = document.getElementById("copyIcon");
+
 const sliderFill = document.getElementById("fill");
 const charaterLength = document.getElementById("charaterLength");
-
-const copyIcon = document.getElementById("copyIcon");
 
 const uppercaseCheckbox = document.getElementById("uppercaseCheckbox");
 const lowerCheckCheckbox = document.getElementById("lowercaseBox");
