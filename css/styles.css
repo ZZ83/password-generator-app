@@ -819,14 +819,6 @@ video {
   line-height: 2rem;
 }
 
-.uppercase {
-  text-transform: uppercase;
-}
-
-.lowercase {
-  text-transform: lowercase;
-}
-
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(129 125 146 / var(--tw-text-opacity));
