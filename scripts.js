@@ -66,6 +66,9 @@ const lowercaseAlphabet = [
     "z",
 ];
 
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const symbols = ["!", "@", "#", "$", "%", "^", "&", "*"];
+
 function slider(range) {
     const width = `${parseInt(range.value) * 4.95}%`;
     sliderFill.style.width = width;
