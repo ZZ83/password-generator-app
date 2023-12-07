@@ -76,3 +76,7 @@ function slider(range) {
     sliderFill.style.width = width;
     charaterLength.innerText = range.value;
 }
+
+copyIcon.addEventListener("click", function () {
+    navigator.clipboard.writeText(password.innerText);
+});
