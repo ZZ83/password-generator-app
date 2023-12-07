@@ -9,6 +9,8 @@ const lowerCheckCheckbox = document.getElementById("lowercaseBox");
 const numberCheckbox = document.getElementById("numbersCheckbox");
 const symbolsCheckbox = document.getElementById("symbolsCheckbox");
 
+const generateButton = document.getElementById("generateButton");
+
 const uppercaseAlphabet = [
     "A",
     "B",
