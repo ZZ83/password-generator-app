@@ -5,7 +5,7 @@ const sliderFill = document.getElementById("fill");
 const charaterLength = document.getElementById("charaterLength");
 
 const uppercaseCheckbox = document.getElementById("uppercaseCheckbox");
-const lowercaseCheckbox = document.getElementById("lowercaseBox");
+const lowercaseCheckbox = document.getElementById("lowercaseCheckbox");
 const numberCheckbox = document.getElementById("numbersCheckbox");
 const symbolsCheckbox = document.getElementById("symbolsCheckbox");
 
