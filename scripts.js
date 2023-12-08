@@ -20,3 +20,5 @@ function slider(range) {
 copyIcon.addEventListener("click", function () {
     navigator.clipboard.writeText(password.innerText);
 });
+
+generateButton.addEventListener("click", function () {});
