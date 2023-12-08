@@ -3,6 +3,7 @@ const copyIcon = document.getElementById("copyIcon");
 
 const sliderFill = document.getElementById("fill");
 const charaterLength = document.getElementById("charaterLength");
+const charaterLengthSlider = document.getElementById("charaterLengthSlider");
 
 const uppercaseCheckbox = document.getElementById("uppercaseCheckbox");
 const lowercaseCheckbox = document.getElementById("lowercaseCheckbox");
