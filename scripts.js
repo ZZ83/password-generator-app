@@ -48,9 +48,15 @@ generateButton.addEventListener("click", function () {
 
         regularX = new RegExp(regularX);
 
-        // Create a loop that will run until the password passes the regular expression test
-        while (!regularX.test(passwordText)) {
-            passwordText = "";
+        if (parseInt(charaterLength.innerText) >= 4) {
+            while (!regularX.test(passwordText)) {
+                passwordText = "";
+                for (let i = 0; i < passwordLength; i++) {
+                    let randomIndex = Math.floor(Math.random() * possibleCharacters.length);
+                    passwordText += possibleCharacters[randomIndex];
+                }
+            }
+        } else {
             for (let i = 0; i < passwordLength; i++) {
                 let randomIndex = Math.floor(Math.random() * possibleCharacters.length);
                 passwordText += possibleCharacters[randomIndex];
