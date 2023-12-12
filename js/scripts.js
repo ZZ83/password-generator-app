@@ -1,4 +1,3 @@
-import "./slider.js";
 import { checkPasswordStrength } from "./password.js";
 
 const password = document.getElementById("password");
@@ -79,6 +78,3 @@ generateButton.addEventListener("click", function () {
         }
     }
 });
-
-if (uppercaseCheckbox.checked || lowercaseCheckbox.checked || numberCheckbox.checked || symbolsCheckbox.checked) {
-}
