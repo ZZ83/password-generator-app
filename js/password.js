@@ -1,4 +1,5 @@
 const bars = document.getElementById("passwordBars").querySelectorAll("div");
+const strengthText = document.getElementById("strengthText");
 
 function resetBars() {
     const classes = [
@@ -28,11 +29,15 @@ export function checkPasswordStrength(password) {
     resetBars();
     if (password.length >= 11) {
         setBarColors(3, "green");
+        strengthText.innerText = "Strong";
     } else if (password.length >= 9) {
         setBarColors(2, "yellow");
+        strengthText.innerText = "Medium";
     } else if (password.length >= 6) {
         setBarColors(1, "orange");
+        strengthText.innerText = "Weak";
     } else {
         setBarColors(0, "red");
+        strengthText.innerText = "too Weak!";
     }
 }
