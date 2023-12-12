@@ -1028,6 +1028,10 @@ video {
     height: 1.5rem;
   }
 
+  .md\:h-8 {
+    height: 2rem;
+  }
+
   .md\:w-\[1\.313\] {
     width: 1.313;
   }
