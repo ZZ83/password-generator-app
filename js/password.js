@@ -1,4 +1,4 @@
-const bars = document.getElementById("passwordBars").querySelectorAll("div");
+const strengthMeterBars = document.getElementById("strengthMeterBars").querySelectorAll("div");
 const strengthText = document.getElementById("strengthText");
 
 function resetBars() {
@@ -12,7 +12,7 @@ function resetBars() {
         "border-green",
         "border-red",
     ];
-    bars.forEach((bar) => {
+    strengthMeterBars.forEach((bar) => {
         bar.classList.remove(...classes);
         bar.classList.add("border-white");
     });
@@ -20,8 +20,8 @@ function resetBars() {
 
 function setBarColors(index, color) {
     for (let i = 0; i <= index; i++) {
-        bars[i].classList.remove("border-white");
-        bars[i].classList.add(`bg-${color}`, `border-${color}`);
+        strengthMeterBars[i].classList.remove("border-white");
+        strengthMeterBars[i].classList.add(`bg-${color}`, `border-${color}`);
     }
 }
 
