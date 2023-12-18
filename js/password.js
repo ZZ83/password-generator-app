@@ -1,7 +1,7 @@
 const strengthMeterBars = document.getElementById("strengthMeterBars").querySelectorAll("div");
 const strengthText = document.getElementById("strengthText");
 
-function resetBars() {
+function resetStrengthMeterBars() {
     const classes = [
         "bg-yellow",
         "bg-orange",
@@ -26,7 +26,7 @@ function setBarColors(index, color) {
 }
 
 export function checkPasswordStrength(password) {
-    resetBars();
+    resetStrengthMeterBars();
     if (password.length >= 11) {
         setBarColors(3, "green");
         strengthText.innerText = "Strong";
