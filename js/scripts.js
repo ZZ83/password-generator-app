@@ -1,7 +1,7 @@
 import { checkPasswordStrength } from "./password.js";
 
 const password = document.getElementById("password");
-const copyIcon = document.getElementById("copyIcon");
+const copyPasswordIcon = document.getElementById("copyPasswordIcon");
 const copied = document.getElementById("copied");
 
 const charaterLength = document.getElementById("charaterLength");
@@ -16,7 +16,7 @@ const generateButton = document.getElementById("generateButton");
 const charaterLengthSlider = document.getElementById("charaterLengthSlider");
 const sliderFill = document.getElementById("fill");
 
-copyIcon.addEventListener("click", function () {
+copyPasswordIcon.addEventListener("click", function () {
     navigator.clipboard.writeText(password.innerText);
 });
 
