@@ -2,7 +2,7 @@ import { checkPasswordStrength } from "./password.js";
 
 const password = document.getElementById("password");
 const copyPasswordIcon = document.getElementById("copyPasswordIcon");
-const copied = document.getElementById("copied");
+const toastMessage = document.getElementById("toastMessage");
 
 const charaterLength = document.getElementById("charaterLength");
 
