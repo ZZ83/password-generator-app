@@ -1,4 +1,5 @@
 import { checkPasswordStrength } from "./password.js";
+import "./copyPassword.js";
 
 const charaterLengthSlider = document.getElementById("charaterLengthSlider");
 const generateButton = document.getElementById("generateButton");
