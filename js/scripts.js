@@ -1,33 +1,24 @@
 import { checkPasswordStrength } from "./password.js";
 
-const password = document.getElementById("password");
-const copyPasswordIcon = document.getElementById("copyPasswordIcon");
-const toastMessage = document.getElementById("toastMessage");
-
-const charaterLength = document.getElementById("charaterLength");
-
-const uppercaseCheckbox = document.getElementById("uppercaseCheckbox");
-const lowercaseCheckbox = document.getElementById("lowercaseCheckbox");
-const numberCheckbox = document.getElementById("numbersCheckbox");
-const symbolsCheckbox = document.getElementById("symbolsCheckbox");
-
+const charaterLengthSlider = document.getElementById("charaterLengthSlider");
 const generateButton = document.getElementById("generateButton");
 
-const charaterLengthSlider = document.getElementById("charaterLengthSlider");
-const sliderFill = document.getElementById("fill");
-
-copyPasswordIcon.addEventListener("click", function () {
-    navigator.clipboard.writeText(password.innerText);
-});
+const password = document.getElementById("password");
+const charaterLength = document.getElementById("charaterLength");
 
 charaterLengthSlider.addEventListener("input", function () {
+    const sliderFill = document.getElementById("fill");
     const width = `${parseInt(this.value) * 4.95}%`;
     sliderFill.style.width = width;
     charaterLength.innerText = this.value;
 });
 
 generateButton.addEventListener("click", function () {
-    if (charaterLengthSlider.value !== "0") {
+    const uppercaseCheckbox = document.getElementById("uppercaseCheckbox");
+    const lowercaseCheckbox = document.getElementById("lowercaseCheckbox");
+    const numberCheckbox = document.getElementById("numbersCheckbox");
+    const symbolsCheckbox = document.getElementById("symbolsCheckbox");
+    if (charaterLength.innerText !== "0") {
         if (
             uppercaseCheckbox.checked ||
             lowercaseCheckbox.checked ||
@@ -78,4 +69,22 @@ generateButton.addEventListener("click", function () {
             alert("Please select at least one option");
         }
     }
+});
+
+const copied = document.getElementById("toastMessage");
+
+const copyPasswordIcon = document.getElementById("copyPasswordIcon");
+copyPasswordIcon.addEventListener("click", function () {
+    navigator.clipboard.writeText(password.innerText);
+});
+
+copyPasswordIcon.addEventListener("click", function () {
+    navigator.clipboard.writeText(password.innerText);
+    copied.classList.add("fade-out");
+    copied.innerText = "COPIED";
+});
+
+copied.addEventListener("animationend", function () {
+    copied.classList.remove("fade-out");
+    copied.innerText = "";
 });
