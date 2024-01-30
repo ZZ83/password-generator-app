@@ -1,12 +1,9 @@
 import { checkPasswordStrength } from "./password.js";
 import "./copyPassword.js";
 
-const charaterLengthSlider = document.getElementById("charaterLengthSlider");
-const generateButton = document.getElementById("generateButton");
-
-const password = document.getElementById("password");
 const charaterLength = document.getElementById("charaterLength");
 
+const charaterLengthSlider = document.getElementById("charaterLengthSlider");
 charaterLengthSlider.addEventListener("input", function () {
     const sliderFill = document.getElementById("fill");
     const width = `${parseInt(this.value) * 4.95}%`;
@@ -14,7 +11,9 @@ charaterLengthSlider.addEventListener("input", function () {
     charaterLength.innerText = this.value;
 });
 
+const generateButton = document.getElementById("generateButton");
 generateButton.addEventListener("click", function () {
+    const password = document.getElementById("password");
     const uppercaseCheckbox = document.getElementById("uppercaseCheckbox");
     const lowercaseCheckbox = document.getElementById("lowercaseCheckbox");
     const numberCheckbox = document.getElementById("numbersCheckbox");
