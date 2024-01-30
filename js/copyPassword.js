@@ -1,17 +1,14 @@
-const copied = document.getElementById("toastMessage");
-
 const copyPasswordIcon = document.getElementById("copyPasswordIcon");
 copyPasswordIcon.addEventListener("click", function () {
     navigator.clipboard.writeText(password.innerText);
-});
-
-copyPasswordIcon.addEventListener("click", function () {
-    navigator.clipboard.writeText(password.innerText);
-    copied.classList.add("fade-out");
     copied.innerText = "COPIED";
+    copied.classList.add("animate-fade");
+    copyPasswordIcon.disabled = true;
 });
 
+const copied = document.getElementById("toastMessage");
 copied.addEventListener("animationend", function () {
-    copied.classList.remove("fade-out");
     copied.innerText = "";
+    copied.classList.remove("animate-fade");
+    copyPasswordIcon.disabled = false;
 });
