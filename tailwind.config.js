@@ -43,7 +43,7 @@ module.exports = {
         screens: {
             xs: "345px",
             sm: "390px",
-            md: "640px",
+            md: "525px",
         },
     },
     plugins: [],

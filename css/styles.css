@@ -1017,7 +1017,7 @@ video {
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 525px) {
   .md\:-top-8 {
     top: -2rem;
   }
