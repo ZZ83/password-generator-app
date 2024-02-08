@@ -25,19 +25,34 @@ function setBarColors(index, color) {
 }
 
 export function checkPasswordStrength(password) {
+    let strength = 0;
     const strengthText = document.getElementById("strengthText");
     resetStrengthMeterBars();
-    if (password.length >= 11) {
-        setBarColors(3, "green");
-        strengthText.innerText = "Strong";
-    } else if (password.length >= 9) {
-        setBarColors(2, "yellow");
-        strengthText.innerText = "Medium";
-    } else if (password.length >= 6) {
-        setBarColors(1, "orange");
-        strengthText.innerText = "Weak";
-    } else {
+
+    if (password.length > 8) {
+        strength += 1;
+    }
+    if (password.match(/[a-z]/) && password.match(/[A-Z]/)) {
+        strength += 1;
+    }
+    if (password.match(/\d/)) {
+        strength += 1;
+    }
+    if (password.match(/[^a-zA-Z\d]/)) {
+        strength += 1;
+    }
+
+    if (strength < 2) {
         setBarColors(0, "red");
         strengthText.innerText = "too Weak!";
+    } else if (strength === 2) {
+        setBarColors(1, "orange");
+        strengthText.innerText = "Weak";
+    } else if (strength === 3) {
+        setBarColors(2, "yellow");
+        strengthText.innerText = "Medium";
+    } else {
+        setBarColors(3, "green");
+        strengthText.innerText = "Strong";
     }
 }
